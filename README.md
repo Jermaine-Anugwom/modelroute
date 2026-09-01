@@ -11,7 +11,7 @@ Production workflows need predictable behavior when a model is slow, unavailable
 
 ## The proof
 
-Task policies, structured output validation, retry budgets, circuit state, and local fallbacks.
+A deterministic eligibility policy that filters providers by health, cost, latency, and structured-output support, then chooses the lowest-cost eligible provider or a local fallback.
 
 ## Why this is forward deployed
 
@@ -37,7 +37,7 @@ flowchart LR
 ```bash
 python3.12 -m venv .venv
 source .venv/bin/activate
-python -m pip install -e '.[dev]'
+python -m pip install -c constraints.txt -e '.[dev]'
 pytest -q
 modelroute
 ```

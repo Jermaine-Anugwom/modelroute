@@ -21,7 +21,7 @@ Production workflows need predictable behavior when a model is slow, unavailable
 
 ## Success measure
 
-Task policies, structured output validation, retry budgets, circuit state, and local fallbacks.
+Deterministic provider eligibility across health, cost, latency, and structured-output support, with a local fallback when none qualify.
 
 ## Handoff
 
